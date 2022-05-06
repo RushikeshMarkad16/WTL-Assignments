@@ -49,7 +49,7 @@ public class Login extends HttpServlet {
 		String password=request.getParameter("pass");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register","root","Aniketraut@04");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register","root","Pass@987");
 			PreparedStatement ps=con.prepareStatement("insert into reg values(?,?,?,?)");
 			ps.setString(1,email);
 			ps.setString(2,first);
@@ -58,7 +58,7 @@ public class Login extends HttpServlet {
 			int i=ps.executeUpdate();
 			if(i>0)
 			{  
-				out.print("regestration sucessful");
+				out.print("registration sucessful");
 				
 			}
 			
