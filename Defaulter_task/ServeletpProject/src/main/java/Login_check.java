@@ -45,7 +45,7 @@ public class Login_check extends HttpServlet {
 		String password=request.getParameter("pass");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register","root","Aniketraut@04");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register","root","Pass@987");
 			Statement stm=con.createStatement();
 			ResultSet rs=stm.executeQuery("select * from reg where email='"+email+"'and password='"+password+"'");
 			
